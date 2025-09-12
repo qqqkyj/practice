@@ -1,0 +1,37 @@
+body {
+  background-color: lightgray;
+}
+
+.card-header {
+  border-bottom: 1px solid lightgray;
+}
+
+.card-container {
+  background-color: white;
+  border-radius: 15px;
+  width: 40%;
+}
+
+.padding-5 {
+  padding: 5% 5% 0 5%;
+}
+
+.card-body {
+  color: gray;
+  padding-left: 5%;
+  border-bottom: 1px solid lightgray;
+}
+
+.keyword {
+  background-color: lightgray;
+  border-radius: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: 2%;
+}
+
+.card-footer {
+  background-color: skyblue;
+  padding: 5%;
+  border-radius: 0 0 15px 15px;
+}

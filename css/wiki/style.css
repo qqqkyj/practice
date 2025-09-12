@@ -1,0 +1,30 @@
+* {
+  margin: 1vh;
+}
+
+.top-2 {
+  margin-top: 2vh;
+}
+
+.top-5 {
+  margin-top: 5vh;
+}
+
+.header {
+  background-color: lightgray;
+  padding: 1vh;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.footer {
+  display: block;
+  bottom: 0px;
+  width: 100%;
+  margin-right: 5%;
+  background-color: lightgray;
+  padding: 3vh;
+  text-align: center;
+}

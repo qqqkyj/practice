@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body class="bg-gray-50" id="profile">
+    <header class="bg-white text-center p-5">
+      <div class="font-extrabold text-xl">Profile</div>
+    </header>
+    <main class="m-5">
+      <div class="flex flex-col items-center">
+        <img class="rounded-full" src="./developer.jpg" alt="developer img" />
+        <h2 class="font-extrabold text-2xl m-2">YeonJu Kang</h2>
+        <div class="font-bold text-gray-600">SoftWare Engineer</div>
+        <div class="text-gray-400 text-sm">Seoul, South Korea</div>
+      </div>
+      <!-- About me -->
+      <div>
+        <h3 class="font-extrabold text-lg">About me</h3>
+      </div>
+      <div class="pt-2 pb-5">
+        I enjoy learning new technologies and constantly strive to improve my
+        code and user experience. I hope to continue growing through various
+        projects in the future.
+      </div>
+      <!-- Skills -->
+      <div>
+        <h3 class="font-extrabold text-lg pb-3">Skills</h3>
+      </div>
+      <div class="flex flex-wrap">
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1">HTML</span>
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1">CSS</span>
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >JavaScript</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >React</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1">Java</span>
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >SpringBoot</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >Spring Data JPA</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >Spring Security</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >Mybatis</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1">AWS</span>
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >Docker</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1"
+          >CI/CD</span
+        >
+        <span class="bg-gray-200 pl-2 pr-2 pt-1 pb-1 rounded-xl m-1">SQL</span>
+      </div>
+
+      <div>
+        <h3 class="font-extrabold text-lg pt-5 pb-3">Projects</h3>
+      </div>
+      <!-- Project1 -->
+      <project1>
+        <a href="https://github.com/qqqkyj/Final_Project">
+          <div class="bg-white rounded-xl p-5 flex flex-row mb-6">
+            <img
+              src="./project1.png"
+              alt="Used goods marketplace Website"
+              class="border border-solid border-gray-100 rounded-xl w-full max-w-xs md:max-w-sm lg:max-w-md h-auto"
+            />
+            <div class="pl-5">
+              <div class="font-extrabold text-gray-500 mb-3">Featured</div>
+              <div class="font-bold">Used goods marketplace</div>
+              <div class="mt-3">
+                A user-friendly online marketplace for buying and selling used
+                items. Implemented real-time chat, product detail pages, search
+                functionality, user profiles, and admin management. Integrated
+                external APIs for payment processing.
+              </div>
+            </div>
+          </div>
+        </a>
+      </project1>
+
+      <!-- Project2 -->
+      <project2>
+        <a href="https://github.com/qqqkyj/SemiProject">
+          <div class="bg-white rounded-xl p-5 flex flex-row">
+            <img
+              src="./project2.png"
+              alt="Movie Booking Website"
+              class="border border-solid border-gray-100 rounded-xl w-full max-w-xs md:max-w-sm lg:max-w-md h-auto"
+            />
+            <div class="pl-5">
+              <div class="font-extrabold text-gray-500 mb-3">Featured</div>
+              <div class="font-bold">Movie Booking Website</div>
+              <div class="mt-3">
+                An intuitive web platform for browsing movies and booking
+                tickets online. Implemented movie listings, showtime schedules,
+                seat selection, online payment, user authentication, and an
+                admin dashboard. Integrated external APIs for login and payment
+                processing.
+              </div>
+            </div>
+          </div>
+        </a>
+      </project2>
+    </main>
+
+    <!-- Download Button -->
+    <div class="text-center mt-5">
+      <button
+        id="downloadBtn"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+      >
+        Download PDF
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="p-5">
+      <h3 class="font-extrabold text-lg pt-5 pb-3">Contact</h3>
+
+      <div class="space-y-4">
+        <!-- 이메일 -->
+        <div class="flex items-center space-x-3">
+          <img src="./email.png" alt="email" class="w-8 h-8 object-contain" />
+          <span class="text-gray-700"> 123rkdduwn@naver.com </span>
+        </div>
+
+        <!-- 깃허브 -->
+        <div class="flex items-center space-x-3">
+          <img src="./github.png" alt="github" class="w-8 h-8 object-contain" />
+          <a
+            href="https://github.com/qqqkyj"
+            target="_blank"
+            class="text-gray-700 hover:underline"
+          >
+            https://github.com/qqqkyj
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        const profile = document.getElementById("profile");
+
+        // 현재 스크롤 위치를 저장합니다.
+        const scrollY = window.scrollY;
+
+        // PDF 캡처 전에 페이지를 맨 위로 스크롤합니다.
+        window.scrollTo(0, 0);
+
+        html2canvas(profile, {
+          scale: 2,
+          useCORS: true, // 이미지가 외부 도메인이라면 CORS 허용
+          scrollY: -window.scrollY, // html2canvas가 자체적으로 스크롤 위치를 보정하도록 합니다.
+        }).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const pdf = new jspdf.jsPDF("p", "mm", "a4");
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = pdf.internal.pageSize.getHeight();
+          const imgProps = pdf.getImageProperties(imgData);
+          const imgWidth = pdfWidth;
+          const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pdfHeight;
+
+          while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            pdf.addPage();
+            pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pdfHeight;
+          }
+
+          pdf.save("YeonJu_Kang_Profile.pdf");
+
+          // PDF 캡처 후 원래 스크롤 위치로 돌아갑니다.
+          window.scrollTo(0, scrollY);
+        });
+      });
+    </script>
+  </body>
+</html>

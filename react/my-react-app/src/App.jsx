@@ -1,13 +1,10 @@
 import React from "react";
-import UserCardContainer from "./components/UserCard/UserCardContainer";
+import Carts from "./components/Carts/Carts";
 
 export default function App() {
 	return (
-		// <div>
-		// 	<h1 className="text-red-500">Hello World</h1>
-		// </div>
 		<>
-			<UserCardContainer></UserCardContainer>
+			<Carts></Carts>
 		</>
 	);
 }

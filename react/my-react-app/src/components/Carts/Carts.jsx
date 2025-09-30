@@ -63,9 +63,16 @@ export default function Carts() {
 		<div className="max-w-7xl mx-auto p-4">
 			<h1 className="text-3xl font-bold mb-6 text-center">상품 목록</h1>
 			<div className="flex flex-wrap gap-4">
+				{/* map() 표현 */}
 				{products.map((product) => {
 					return <Product product={product} />;
 				})}
+
+				{/* map() X 표현*/}
+				{/* <Product product={carts["products"][0]} />
+				<Product product={carts["products"][1]} />
+				<Product product={carts["products"][2]} />
+				<Product product={carts["products"][3]} /> */}
 			</div>
 		</div>
 	);

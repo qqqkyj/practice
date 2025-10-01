@@ -1,12 +1,6 @@
 import React from "react";
-import Counter from "./Counter/Counter";
-import Calculator from "./Calculator/Calculator";
-import QuoteContainer from "./DummyJSON/QuoteContainer";
+import ProductContainer from "./ProductSort/ProductContainer";
 
 export default function Main() {
-	return (
-		<>
-			<QuoteContainer />
-		</>
-	);
+	return <ProductContainer />;
 }

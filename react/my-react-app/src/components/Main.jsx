@@ -1,6 +1,6 @@
 import React from "react";
-import ProductContainer from "./ProductSort/ProductContainer";
+import Container from "./PostComments/Container";
 
 export default function Main() {
-	return <ProductContainer />;
+	return <Container></Container>;
 }

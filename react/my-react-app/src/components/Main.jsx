@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./PostComments/Container";
+import MovieSearch from "./TMDB/MovieSearch";
 
 export default function Main() {
-	return <Container></Container>;
+	return <MovieSearch></MovieSearch>;
 }

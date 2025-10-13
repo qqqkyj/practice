@@ -1,25 +1,46 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/Home";
-import Products from "../pages/Products";
-import Carts from "../pages/Carts";
-import Posts from "../pages/Posts";
+
+import DummyLayout from "../layouts/DummyLayout";
+import RootLayout from "../layouts/RootLayout";
+
+import Home from "../pages/RootPages/Home";
+import DummyHome from "../pages/DummyPages/DummyHome";
+import Products from "../pages/DummyPages/Products";
+import CartsList from "../components/CartsList";
+import Posts from "../pages/DummyPages/Posts";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		Component: Home,
+		Component: RootLayout,
+		children: [
+			{
+				index: true,
+				Component: Home,
+			},
+		],
 	},
 	{
-		path: "/dummy/products",
-		Component: Products,
-	},
-	{
-		path: "/dummy/carts",
-		Component: Carts,
-	},
-	{
-		path: "/dummy/posts",
-		Component: Posts,
+		path: "/dummy",
+		Component: DummyLayout,
+		children: [
+			{
+				index: true,
+				Component: DummyHome,
+			},
+			{
+				path: "products",
+				Component: Products,
+			},
+			{
+				path: "carts",
+				Component: CartsList,
+			},
+			{
+				path: "posts",
+				Component: Posts,
+			},
+		],
 	},
 ]);
 

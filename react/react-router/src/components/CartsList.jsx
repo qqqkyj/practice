@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getAllCarts } from "../api/dummyJson";
-import Carts from "../pages/Carts";
+import Carts from "../pages/DummyPages/Carts";
 
 export default function CartsList() {
 	const [carts, setCarts] = useState([]);
 
 	useEffect(() => {
 		async function fetchData() {
-			console.log("fetchData 시작");
 			const res = await getAllCarts();
-			console.log("res 확인:", res);
 			setCarts(res["data"]["carts"]);
 		}
 

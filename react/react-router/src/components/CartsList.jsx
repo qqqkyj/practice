@@ -15,7 +15,7 @@ export default function CartsList() {
 	}, []);
 
 	return (
-		<div>
+		<div className="p-8">
 			<h1 className="font-bold text-4xl mb-4">🛒 장바구니 목록</h1>
 			<div className="space-y-6">
 				{carts.map((cart) => (

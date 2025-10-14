@@ -8,6 +8,8 @@ import DummyHome from "../pages/DummyPages/DummyHome";
 import Products from "../pages/DummyPages/Products";
 import CartsList from "../components/CartsList";
 import Posts from "../pages/DummyPages/Posts";
+import PostDetail from "../pages/DummyPages/PostDetail";
+import ProductDetail from "../pages/DummyPages/ProductDetail";
 
 const router = createBrowserRouter([
 	{
@@ -33,12 +35,20 @@ const router = createBrowserRouter([
 				Component: Products,
 			},
 			{
+				path: "products/:productId",
+				Component: ProductDetail,
+			},
+			{
 				path: "carts",
 				Component: CartsList,
 			},
 			{
 				path: "posts",
 				Component: Posts,
+			},
+			{
+				path: "posts/:postId",
+				Component: PostDetail,
 			},
 		],
 	},

@@ -5,8 +5,7 @@ export default function DummyLayout() {
 	const basicClass = `border-2 border-amber-300 p-2`;
 
 	return (
-		<div className="text-center text-5xl mb-7">
-			DummyLayout
+		<div className="text-center text-5xl m-7">
 			<div>
 				<NavLink className={`${basicClass}`} to="/dummy/products">
 					상품 목록

@@ -8,9 +8,9 @@ export default function Carts({ cart }) {
 	return (
 		<div className="border rounded-xl p-4 shadow-md">
 			<h2 className="font-semibold text-2xl mb-3">🧺 Cart ID: {cart.id}</h2>
-			<ul className="list-disc ml-5">
+			<ul className="list-disc ml-5 space-y-2">
 				{cart.products?.map((product) => (
-					<ol key={product.id}>
+					<ol key={product.id} className="p-2 bg-gray-50 rounded">
 						{product.title} — {product.price}$
 					</ol>
 				))}

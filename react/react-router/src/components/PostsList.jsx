@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { getAllSortedPosts, getPaginatedPosts } from "../api/dummyJson";
+import { getPaginatedPosts } from "../api/dummyJson";
 import { Link, useSearchParams } from "react-router-dom";
 
 export default function PostList() {
 	const [posts, setPosts] = useState([]);
 	const [searchParams, setSearchParams] = useSearchParams();
 	const skip = Number(searchParams.get("skip") ?? 0);
+	const sortBy = searchParams.get("sortBy") ?? "id";
+	const order = searchParams.get("order") ?? "asc";
+
 	const LIMIT = 5;
 
 	useEffect(() => {
@@ -24,7 +27,11 @@ export default function PostList() {
 				<button
 					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 					onClick={() => {
-						skip >= LIMIT && setSearchParams({ skip: skip - LIMIT });
+						// skip >= LIMIT && setSearchParams({ skip: skip - LIMIT });
+						setSearchParams((searchParams) => {
+							searchParams.set("skip", Number(skip) - 5);
+							return searchParams;
+						});
 					}}
 				>
 					이전

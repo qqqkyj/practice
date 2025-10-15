@@ -50,8 +50,10 @@ export async function getAllSortedPosts(sortBy, order) {
 	return res;
 }
 
-export async function getPaginatedPosts(limit, skip) {
-	const res = await axiosInstance.get(`/posts?limit=${limit}&skip=${skip}`);
+export async function getPaginatedPosts(limit, skip, sortBy, order) {
+	const res = await axiosInstance.get(
+		`/posts?limit=${limit}&skip=${skip}&sortBy=${sortBy}&order=${order}`
+	);
 	console.log("getPaginatedPosts", res);
 	return res;
 }
